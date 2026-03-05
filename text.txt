@@ -1,0 +1,14 @@
+Creare uno script che monitori un'area. Se viene rilevato un movimento significativo,
+il sistema deve attivare YOLO per verificare se l'oggetto in movimento è una persona.
+Se la persona permane in una zona vietata, deve scattare un avviso di "Attività Sospetta".
+
+📋 Requisiti della Consegna
+Motion Detection: Utilizza il sottoscrittore di background di OpenCV (createBackgroundSubtractorMOG2) per identificare i pixel in movimento.
+
+Filtro YOLO: Applica il modello YOLOv8 (libreria ultralytics) solo quando il movimento supera una certa soglia di area (es. 5000 pixel).
+
+Logica Anti-Furto: Il sistema deve rilevare specificamente la classe person.
+
+Visualizzazione: Disegna un rettangolo verde per il movimento generico e un rettangolo rosso con l'etichetta "SOSPETTO" se viene identificata una persona.
+
+Codice Pulito: Dividi il codice in funzioni o classi (Inizializzazione, Elaborazione Frame, Detection).
